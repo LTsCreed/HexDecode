@@ -2,6 +2,7 @@ import time, os, glob
 import toml
 import logging
 import argparse
+from sys import exit
 
 
 #"""
@@ -65,7 +66,7 @@ def main():
     else:
         if not args.source or not args.destination:
             logger.error("Source or Destination argument not suppled")
-            quit()
+            exit(0)
         Data.src_name_search = args.source
         Data.dst_name_search = args.destination
 
